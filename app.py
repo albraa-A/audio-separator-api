@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import replicate
 import os
 
 app = Flask(__name__)
+
+CORS(app)
 
 REPLICATE_API_TOKEN = os.environ.get("REPLICATE_API_TOKEN")
 
