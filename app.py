@@ -5,8 +5,7 @@ import os
 
 app = Flask(__name__)
 
-CORS(app)
-
+CORS(app, resources={r"/*": {"origins": "*"}})
 REPLICATE_API_TOKEN = os.environ.get("REPLICATE_API_TOKEN")
 
 @app.route("/")
