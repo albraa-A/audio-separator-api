@@ -28,7 +28,7 @@ def separate():
 
         with open(filepath, "rb") as audio_file:
             output = client.run(
-                "cjwbw/demucs",
+                "cjwbw/demucs:25a173108cff36ef9f80f854c162d01df9e6528be175794b81158fa03836d953",
                 input={"audio": audio_file}
             )
 
